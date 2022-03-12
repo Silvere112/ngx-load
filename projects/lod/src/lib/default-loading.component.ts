@@ -12,7 +12,7 @@ import { Component } from '@angular/core';
         width: 100%;
         align-items: center;
         justify-content: center;
-        background-color: rgba(255, 255, 255, 0.5);;
+        background-color: rgba(255, 255, 255, 0.5);
       }
 
       .lds-ripple {
@@ -23,7 +23,7 @@ import { Component } from '@angular/core';
       }
       .lds-ripple div {
         position: absolute;
-        border: 4px solid #fff;
+        border: 4px solid black;
         opacity: 1;
         border-radius: 50%;
         animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
