@@ -3,23 +3,23 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "loading-directive": {
+    "lod": {
       "projectType": "library",
-      "root": "projects/loading-directive",
-      "sourceRoot": "projects/loading-directive/src",
+      "root": "projects/lod",
+      "sourceRoot": "projects/lod/src",
       "prefix": "lib",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
-            "project": "projects/loading-directive/ng-package.json"
+            "project": "projects/lod/ng-package.json"
           },
           "configurations": {
             "production": {
-              "tsConfig": "projects/loading-directive/tsconfig.lib.prod.json"
+              "tsConfig": "projects/lod/tsconfig.lib.prod.json"
             },
             "development": {
-              "tsConfig": "projects/loading-directive/tsconfig.lib.json"
+              "tsConfig": "projects/lod/tsconfig.lib.json"
             }
           },
           "defaultConfiguration": "production"
@@ -27,9 +27,9 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/loading-directive/src/test.ts",
-            "tsConfig": "projects/loading-directive/tsconfig.spec.json",
-            "karmaConfig": "projects/loading-directive/karma.conf.js"
+            "main": "projects/lod/src/test.ts",
+            "tsConfig": "projects/lod/tsconfig.spec.json",
+            "karmaConfig": "projects/lod/karma.conf.js"
           }
         }
       }
@@ -138,5 +138,5 @@
       }
     }
   },
-  "defaultProject": "loading-directive"
+  "defaultProject": "lod"
 }

@@ -1,18 +1,18 @@
 import { Directive, ElementRef, Inject, Input, OnDestroy, OnInit } from '@angular/core';
 import { Overlay } from "@angular/cdk/overlay";
 import { ComponentPortal } from "@angular/cdk/portal";
-import { ElementRuler, Size } from "projects/loading-directive/src/lib/element-ruler.service";
-import { CONFIGURATION_TOKEN, LoaderConfiguration } from "projects/loading-directive/src/lib/loader.configuration";
+import { ElementRuler, Size } from "./element-ruler.service";
+import { CONFIGURATION_TOKEN, LoaderConfiguration } from "./loader.configuration";
 
 @Directive({
-  selector: '[appLoaded]'
+  selector: '[lodIsLoaded]'
 })
 export class LoadedDirective implements OnInit, OnDestroy {
   isLoading = false
   isOverlayAttached = false
 
   @Input()
-  set appLoaded(value: any | null | undefined) {
+  set lodIsLoaded(value: any | null | undefined) {
     this.isLoading = !value
     if (this.isLoading) {
       this.attach();
