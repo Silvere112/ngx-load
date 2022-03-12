@@ -3,5 +3,140 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-  }
+    "loading-directive": {
+      "projectType": "library",
+      "root": "projects/loading-directive",
+      "sourceRoot": "projects/loading-directive/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/loading-directive/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/loading-directive/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/loading-directive/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/loading-directive/src/test.ts",
+            "tsConfig": "projects/loading-directive/tsconfig.spec.json",
+            "karmaConfig": "projects/loading-directive/karma.conf.js"
+          }
+        }
+      }
+    },
+    "examples": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        },
+        "@schematics/angular:application": {
+          "strict": true
+        }
+      },
+      "root": "projects/examples",
+      "sourceRoot": "projects/examples/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/examples",
+            "index": "projects/examples/src/index.html",
+            "main": "projects/examples/src/main.ts",
+            "polyfills": "projects/examples/src/polyfills.ts",
+            "tsConfig": "projects/examples/tsconfig.app.json",
+            "inlineStyleLanguage": "scss",
+            "assets": [
+              "projects/examples/src/favicon.ico",
+              "projects/examples/src/assets"
+            ],
+            "styles": [
+              "projects/examples/src/styles.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "fileReplacements": [
+                {
+                  "replace": "projects/examples/src/environments/environment.ts",
+                  "with": "projects/examples/src/environments/environment.prod.ts"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "browserTarget": "examples:build:production"
+            },
+            "development": {
+              "browserTarget": "examples:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "examples:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/examples/src/test.ts",
+            "polyfills": "projects/examples/src/polyfills.ts",
+            "tsConfig": "projects/examples/tsconfig.spec.json",
+            "karmaConfig": "projects/examples/karma.conf.js",
+            "inlineStyleLanguage": "scss",
+            "assets": [
+              "projects/examples/src/favicon.ico",
+              "projects/examples/src/assets"
+            ],
+            "styles": [
+              "projects/examples/src/styles.scss"
+            ],
+            "scripts": []
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "loading-directive"
 }
