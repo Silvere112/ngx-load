@@ -2,8 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CustomLoadingComponent } from "projects/examples/src/app/custom-loading/custom-loading.component";
 import { CustomLoadingPageComponent } from 'projects/examples/src/app/custom-loading/custom-loading-page.component';
-import { LoaderModule } from "projects/loading-directive/src/lib/loader.module";
 import { RouterModule } from "@angular/router";
+import { LoaderModule } from "projects/lod/src/public-api";
 
 
 @NgModule({

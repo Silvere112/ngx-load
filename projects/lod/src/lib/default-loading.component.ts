@@ -40,8 +40,8 @@ import { Component } from '@angular/core';
           opacity: 1;
         }
         100% {
-          top: 0px;
-          left: 0px;
+          top: 0;
+          left: 0;
           width: 72px;
           height: 72px;
           opacity: 0;

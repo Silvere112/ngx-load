@@ -3,8 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { LoaderModule } from "projects/loading-directive/src/public-api";
-import { CustomLoadingComponent } from "projects/examples/src/app/custom-loading/custom-loading.component";
 
 @NgModule({
   declarations: [
@@ -12,14 +10,10 @@ import { CustomLoadingComponent } from "projects/examples/src/app/custom-loading
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    LoaderModule.with(
-      {
-        loaderComponent: CustomLoadingComponent
-      }
-    )
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
