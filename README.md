@@ -1,9 +1,11 @@
+<h1 align="center">ng-lod</h1>
+<p align="center">A simple angular loading overlay directive</p>
 <p align="center">
   <img width="30%" height="30%" src="./assets/demo.gif?raw=true"><br />
 </p>
 <br />
 
-> Add easily an overlay loader over any kind of component. Fully customizable with our own components.
+> Add easily an overlay loader over any kind of component. Fully customizable with your own components.
 <h6>Checkout the demo at: https://stackblitz.com/github/Silvere112/ng-lod-examples/tree/main/mat-table. </h6 >
 
 ## Compatibility with Angular Versions
@@ -34,15 +36,27 @@
 - 🛠 **Customizable**
 - ☕ **Easy to use**
 
-## Installation
+## Prerequisite
+If not already done you should setup Angular CDK as mention [here](https://material.angular.io/cdk/overlay/overview).
 
-You can install it through **npm**:
-
+Install the dependency with
 ```bash
-npm i @angular/cdk ng-lod
+npm i @angular/cdk
 ```
 
-When you install using **npm**, you will also need to import `LoaderModule` in your `app.module`.
+Then add the following snippet in your global **style.scss**
+
+
+```scss
+@import '@angular/cdk/overlay-prebuilt.css';
+```
+## Installation
+
+Install it through **npm** with :
+
+```bash
+npm i ng-lod
+```
 
 ## Configuration
 
