@@ -1,5 +1,5 @@
 <h1 align="center">ng-lod</h1>
-<p align="center">A simple angular loading overlay directive</p>
+<p align="center">A simple angular directive for adding a loading overlay</p>
 <p align="center">
   <img width="30%" height="30%" src="./assets/demo.gif?raw=true"><br />
 </p>
