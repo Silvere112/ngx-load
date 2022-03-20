@@ -27,10 +27,10 @@ import { DefaultLoadingComponent } from "./default-loading.component";
     LoadedDirective
   ]
 })
-export class LoaderModule {
-  static with(configuration: LoaderConfiguration): ModuleWithProviders<LoaderModule> {
+export class NgxLoadModule {
+  static with(configuration: LoaderConfiguration): ModuleWithProviders<NgxLoadModule> {
     return {
-      ngModule: LoaderModule,
+      ngModule: NgxLoadModule,
       providers: [
         {provide: CONFIGURATION_TOKEN, useValue: configuration}
       ]

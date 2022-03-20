@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
-import { EMPTY, of, shareReplay, switchMap, timer } from "rxjs";
+import { of, shareReplay, switchMap, timer } from "rxjs";
 
 @Component({
   template: `
     <a routerLink="/custom">
       <button> Custom loader</button>
     </a>
-    <div [lodIsLoaded]="observable | async" class="container">
+    <div [loadIsLoaded]="observable | async" class="container">
       <span> {{ (observable | async) || "default loader" }}</span>
     </div>
   `,

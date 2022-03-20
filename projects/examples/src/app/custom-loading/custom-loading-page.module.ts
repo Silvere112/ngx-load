@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { CustomLoadingComponent } from "projects/examples/src/app/custom-loading/custom-loading.component";
 import { CustomLoadingPageComponent } from 'projects/examples/src/app/custom-loading/custom-loading-page.component';
 import { RouterModule } from "@angular/router";
-import { LoaderModule } from "projects/lod/src/public-api";
+import { NgxLoadModule } from "projects/load/src/lib/ngx-load.module";
 
 
 @NgModule({
@@ -19,7 +19,7 @@ import { LoaderModule } from "projects/lod/src/public-api";
         component: CustomLoadingPageComponent
       }
     ]),
-    LoaderModule.with(
+    NgxLoadModule.with(
       {
         loaderComponent: CustomLoadingComponent // Provide your custom loader component here
       }
