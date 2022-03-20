@@ -1,4 +1,4 @@
-<h1 align="center">ng-lod</h1>
+<h1 align="center">ngx-load</h1>
 <p align="center">A simple angular directive for adding a loading overlay</p>
 <p align="center">
   <img width="30%" height="30%" src="./assets/demo.gif?raw=true"><br />
@@ -6,14 +6,14 @@
 <br />
 
 > Add easily an overlay loader over any kind of component. Fully customizable with your own components.
-<h6>Checkout the demo at: https://stackblitz.com/github/Silvere112/ng-lod-examples/tree/main/mat-table. </h6 >
+<h6>Checkout the demo at: https://stackblitz.com/github/Silvere112/ngx-load-examples/tree/main/mat-table. </h6 >
 
 ## Compatibility with Angular Versions
 
 <table>
   <thead>
     <tr>
-      <th>ng-lod</th>
+      <th>ngx-load</th>
       <th>Angular</th>
     </tr>
   </thead>
@@ -55,14 +55,14 @@ Then add the following snippet in your global **style.scss**
 Install it through **npm** with :
 
 ```bash
-npm i ng-lod
+npm i ngx-load
 ```
 
 ## Configuration
 
 ### Using default loader
 ```typescript
-import { LoaderModule } from "ng-lod";
+import { LoaderModule } from "ngx-load";
 
 @NgModule({
   imports: [LoaderModule]
@@ -72,7 +72,7 @@ class AppModule {}
 
 ### Using custom loader
 ```typescript
-import { LoaderModule } from "ng-lod";
+import { LoaderModule } from "ngx-load";
 
 @NgModule({
   imports: [

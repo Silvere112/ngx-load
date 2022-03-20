@@ -5,14 +5,14 @@ import { ElementRuler, Size } from "./element-ruler.service";
 import { CONFIGURATION_TOKEN, LoaderConfiguration } from "./loader.configuration";
 
 @Directive({
-  selector: '[lodIsLoaded]'
+  selector: '[loadIsLoaded]'
 })
 export class LoadedDirective implements OnInit, OnDestroy {
   isLoading = false
   isOverlayAttached = false
 
   @Input()
-  set lodIsLoaded(value: any | null | undefined) {
+  set loadIsLoaded(value: any | null | undefined) {
     this.isLoading = !value
     if (this.isLoading) {
       this.attach();
