@@ -138,5 +138,6 @@ export class ExampleComponent {
 
 - Readme inspired from <a href="https://github.com/ngneat/hot-toast/blob/master/README.md">@ngneat/hot-toast</a>
 - @etiennecrb for the ElementRuler taken from this <a href="https://github.com/angular/components/issues/10393#issuecomment-381084401">thread</a> 
+- <a href="https://loading.io/css">loading.io</a> for the default loader
 
 

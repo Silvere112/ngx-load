@@ -1,3 +1,4 @@
+// Inspired from : https://loading.io/css
 import { Component } from '@angular/core';
 
 @Component({
@@ -51,8 +52,4 @@ import { Component } from '@angular/core';
   ]
 })
 export class DefaultLoadingComponent {
-
-  constructor() {
-  }
-
 }
