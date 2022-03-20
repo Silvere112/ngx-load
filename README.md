@@ -62,21 +62,21 @@ npm i ngx-load
 
 ### Using default loader
 ```typescript
-import { LoaderModule } from "ngx-load";
+import { NgxLoadModule } from "ngx-load";
 
 @NgModule({
-  imports: [LoaderModule]
+  imports: [NgxLoadModule]
 })
 class AppModule {}
 ```
 
 ### Using custom loader
 ```typescript
-import { LoaderModule } from "ngx-load";
+import { NgxLoadModule } from "ngx-load";
 
 @NgModule({
   imports: [
-    LoaderModule.with({
+    NgxLoadModule.with({
       loaderComponent: YourLoaderComponent
     })
   ]
@@ -93,7 +93,7 @@ class AppModule {}
 @Component({
   selector: 'example',
   template: `
-        <div [lodIsLoaded]="content | async" class="element"> {{ content | async }} </div>
+        <div [loadIsLoaded]="content | async" class="element"> {{ content | async }} </div>
     `,
   styles: [
     `
@@ -114,7 +114,7 @@ export class ExampleComponent {
 @Component({
   selector: 'example',
   template: `
-        <div [lodIsLoaded]="isLoaded()" class="element"></div>
+        <div [loadIsLoaded]="isLoaded()" class="element"></div>
     `,
   styles: [
     `
