@@ -1,5 +1,5 @@
 {
-  "name": "ng-lod",
+  "name": "ngx-load",
   "version": "0.0.2",
   "peerDependencies": {
     "@angular/common": "^13.2.0",

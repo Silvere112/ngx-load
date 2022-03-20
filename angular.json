@@ -3,23 +3,23 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "lod": {
+    "load": {
       "projectType": "library",
-      "root": "projects/lod",
-      "sourceRoot": "projects/lod/src",
+      "root": "projects/load",
+      "sourceRoot": "projects/load/src",
       "prefix": "lib",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
-            "project": "projects/lod/ng-package.json"
+            "project": "projects/load/ng-package.json"
           },
           "configurations": {
             "production": {
-              "tsConfig": "projects/lod/tsconfig.lib.prod.json"
+              "tsConfig": "projects/load/tsconfig.lib.prod.json"
             },
             "development": {
-              "tsConfig": "projects/lod/tsconfig.lib.json"
+              "tsConfig": "projects/load/tsconfig.lib.json"
             }
           },
           "defaultConfiguration": "production"
@@ -27,9 +27,9 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/lod/src/test.ts",
-            "tsConfig": "projects/lod/tsconfig.spec.json",
-            "karmaConfig": "projects/lod/karma.conf.js"
+            "main": "projects/load/src/test.ts",
+            "tsConfig": "projects/load/tsconfig.spec.json",
+            "karmaConfig": "projects/load/karma.conf.js"
           }
         }
       }
@@ -138,5 +138,5 @@
       }
     }
   },
-  "defaultProject": "lod"
+  "defaultProject": "load"
 }
