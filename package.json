@@ -6,7 +6,9 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "copy": "cp -r README.md dist/load",
+    "build:lib": "ng build load && npm run copy"
   },
   "private": true,
   "dependencies": {
