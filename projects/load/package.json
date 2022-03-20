@@ -5,6 +5,25 @@
     "@angular/common": "^13.2.0",
     "@angular/core": "^13.2.0"
   },
+  "description": "A simple angular directive for adding a loading overlay.",
+  "keywords": [
+    "angular",
+    "angular 2",
+    "loader",
+    "loading",
+    "loading",
+    "directive",
+    "overlay"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Silvere112/ngx-load/issue"
+  },
+  "homepage": "https://github.com/Silvere112/ngx-load#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Silvere112/ngx-load"
+  },
   "dependencies": {
     "tslib": "^2.3.0"
   }
