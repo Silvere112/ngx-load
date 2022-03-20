@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { RouterModule } from "@angular/router";
 import { DefaultLoadingPageComponent } from "projects/examples/src/app/default-loading/default-loading-page.component";
-import { LoaderModule } from "projects/lod/src/public-api";
+import { NgxLoadModule } from "projects/load/src/lib/ngx-load.module";
 
 
 @NgModule({
@@ -18,7 +18,7 @@ import { LoaderModule } from "projects/lod/src/public-api";
         component: DefaultLoadingPageComponent
       }
     ]),
-    LoaderModule // Use the default loader
+    NgxLoadModule // Use the default loader
   ]
 })
 export class DefaultLoadingPageModule {
