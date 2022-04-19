@@ -6,7 +6,7 @@
 <br />
 
 > Add easily an overlay loader over any kind of component. Fully customizable with your own components.
-<h6>Checkout the demo at: https://stackblitz.com/github/Silvere112/ngx-load-examples/tree/main/mat-table. </h6 >
+<h6>Checkout the demo at: https://silvere112.github.io/ngx-load/</h6>
 
 ## Compatibility with Angular Versions
 
@@ -85,11 +85,38 @@ class AppModule {}
 ```
 
 ## Usage
-
-### Local overlay loader usage 
+### LoaderService 
+<h6>Checkout the demo at: https://stackblitz.com/github/Silvere112/ngx-load-examples/tree/main/LoaderService/mat-table</h6 >
 
 ```typescript
+@Component({
+  selector: 'example',
+  template: `
+        <div class="element"> {{ content | async }} </div>
+    `,
+  styles: [
+    `
+            .element {
+                width: 100px;
+                height: 100px;
+            }
+        `
+  ]
+})
+export class ExampleComponent {
+  content = timer(1000)
+    .pipe(map(() => "Hello World"))
+    .pipe(this.loaderService.attachLoader())
 
+  constructor(public loaderService: LoaderService) {
+  }
+}
+```
+
+### OverlayLoaderDirective
+<h6>Checkout the demo at: https://stackblitz.com/github/Silvere112/ngx-load-examples/tree/main/OverlayLoaderDirective/mat-table</h6>
+
+```typescript
 @Component({
   selector: 'example',
   template: `
@@ -105,11 +132,14 @@ class AppModule {}
   ]
 })
 export class ExampleComponent {
-  content = timer(1000).pipe(map(() => "Hello World"), shareReplay())
+  content = timer(1000).pipe(map(() => "Hello World"))
 }
 ```
 
+### ReplacementLoaderDirective
+<h6>Checkout the demo at: TODO</h6 >
 
+TODO: make example 
 
 
 ## Credits
