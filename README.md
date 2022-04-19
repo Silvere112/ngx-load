@@ -1,5 +1,5 @@
 <h1 align="center">ngx-load</h1>
-<p align="center">A simple angular directive for adding a loading overlay</p>
+<p align="center">A simple angular library for adding loaders</p>
 <p align="center">
   <img width="30%" height="30%" src="./assets/demo.gif?raw=true"><br />
 </p>
@@ -86,14 +86,14 @@ class AppModule {}
 
 ## Usage
 
-### Usage with async pipe - Recommended
+### Local overlay loader usage 
 
 ```typescript
 
 @Component({
   selector: 'example',
   template: `
-        <div [loadIsLoaded]="content | async" class="element"> {{ content | async }} </div>
+        <div [loadOverlayLoader]="content" class="element"> {{ content | async }} </div>
     `,
   styles: [
     `
@@ -109,28 +109,6 @@ export class ExampleComponent {
 }
 ```
 
-### Classic usage
-```typescript
-@Component({
-  selector: 'example',
-  template: `
-        <div [loadIsLoaded]="isLoaded()" class="element"></div>
-    `,
-  styles: [
-    `
-            .element {
-                width: 100px;
-                height: 100px;
-            }
-        `
-  ]
-})
-export class ExampleComponent {
-  isLoaded() {
-    return false
-  }
-}
-```
 
 
 

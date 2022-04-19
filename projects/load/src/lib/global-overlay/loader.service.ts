@@ -2,7 +2,7 @@ import { Inject, Injectable } from '@angular/core';
 import { Overlay } from "@angular/cdk/overlay";
 import { ComponentPortal } from "@angular/cdk/portal";
 import { Observable, tap } from "rxjs";
-import { CONFIGURATION_TOKEN, LoaderConfiguration } from "projects/load/src/lib/core/loader.configuration";
+import { CONFIGURATION_TOKEN, LoaderConfiguration } from "../core/loader.configuration";
 
 @Injectable()
 export class LoaderService {

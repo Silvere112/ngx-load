@@ -1,11 +1,11 @@
 {
   "name": "ngx-load",
-  "version": "0.0.2",
+  "version": "0.0.x",
   "peerDependencies": {
     "@angular/common": "^13.2.0",
     "@angular/core": "^13.2.0"
   },
-  "description": "A simple angular directive for adding a loading overlay.",
+  "description": "A simple angular library for adding loaders.",
   "keywords": [
     "angular",
     "angular 2",

@@ -2,8 +2,8 @@ import { Directive, ElementRef, Inject, Input, OnDestroy, OnInit } from '@angula
 import { Overlay } from "@angular/cdk/overlay";
 import { ComponentPortal } from "@angular/cdk/portal";
 import { Observable, Subscription } from "rxjs";
-import { ElementRuler, Size } from "projects/load/src/lib/local-overlay/element-ruler.service";
-import { CONFIGURATION_TOKEN, LoaderConfiguration } from "projects/load/src/lib/core/loader.configuration";
+import { ElementRuler, Size } from "./element-ruler.service";
+import { CONFIGURATION_TOKEN, LoaderConfiguration } from "../core/loader.configuration";
 
 @Directive({
   selector: '[loadOverlayLoader]'

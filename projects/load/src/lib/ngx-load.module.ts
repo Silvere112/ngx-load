@@ -1,12 +1,12 @@
 import { ModuleWithProviders, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { OverlayModule } from "@angular/cdk/overlay";
-import { ElementRuler } from "projects/load/src/lib/local-overlay/element-ruler.service";
-import { CONFIGURATION_TOKEN, DEFAULT_CONFIGURATION, LoaderConfiguration } from "projects/load/src/lib/core/loader.configuration";
-import { DefaultLoadingComponent } from "projects/load/src/lib/core/default-loading.component";
-import { OverlayLoaderDirective } from "projects/load/src/lib/local-overlay/overlay-loader.directive";
-import { ReplacementLoaderDirective } from "projects/load/src/lib/local-replacement/replacement-loader.directive";
-import { LoaderService } from "projects/load/src/lib/global-overlay/loader.service";
+import { ElementRuler } from "./local-overlay/element-ruler.service";
+import { CONFIGURATION_TOKEN, DEFAULT_CONFIGURATION, LoaderConfiguration } from "./core/loader.configuration";
+import { DefaultLoadingComponent } from "./core/default-loading.component";
+import { OverlayLoaderDirective } from "./local-overlay/overlay-loader.directive";
+import { ReplacementLoaderDirective } from "./local-replacement/replacement-loader.directive";
+import { LoaderService } from "./global-overlay/loader.service";
 
 @NgModule({
   declarations: [
