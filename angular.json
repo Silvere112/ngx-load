@@ -51,7 +51,8 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/examples",
+            "outputPath": "docs",
+            "baseHref": "https://silvere112.github.io/ngx-load/",
             "index": "projects/examples/src/index.html",
             "main": "projects/examples/src/main.ts",
             "polyfills": "projects/examples/src/polyfills.ts",
