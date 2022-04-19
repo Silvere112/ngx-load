@@ -1,19 +1,18 @@
 import { ModuleWithProviders, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { OverlayModule } from "@angular/cdk/overlay";
-import { LoadedDirective } from "./loaded.directive";
-import { ElementRuler } from "./element-ruler.service";
-import {
-  CONFIGURATION_TOKEN,
-  DEFAULT_CONFIGURATION,
-  LoaderConfiguration
-} from "./loader.configuration";
-import { DefaultLoadingComponent } from "./default-loading.component";
+import { ElementRuler } from "projects/load/src/lib/local-overlay/element-ruler.service";
+import { CONFIGURATION_TOKEN, DEFAULT_CONFIGURATION, LoaderConfiguration } from "projects/load/src/lib/core/loader.configuration";
+import { DefaultLoadingComponent } from "projects/load/src/lib/core/default-loading.component";
+import { OverlayLoaderDirective } from "projects/load/src/lib/local-overlay/overlay-loader.directive";
+import { ReplacementLoaderDirective } from "projects/load/src/lib/local-replacement/replacement-loader.directive";
+import { LoaderService } from "projects/load/src/lib/global-overlay/loader.service";
 
 @NgModule({
   declarations: [
-    LoadedDirective,
-    DefaultLoadingComponent
+    DefaultLoadingComponent,
+    OverlayLoaderDirective,
+    ReplacementLoaderDirective
   ],
   imports: [
     CommonModule,
@@ -21,10 +20,12 @@ import { DefaultLoadingComponent } from "./default-loading.component";
   ],
   providers: [
     ElementRuler,
+    LoaderService,
     {provide: CONFIGURATION_TOKEN, useValue: DEFAULT_CONFIGURATION}
   ],
   exports: [
-    LoadedDirective
+    OverlayLoaderDirective,
+    ReplacementLoaderDirective
   ]
 })
 export class NgxLoadModule {

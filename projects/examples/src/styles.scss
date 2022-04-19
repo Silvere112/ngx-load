@@ -1,7 +1,4 @@
 @import '@angular/cdk/overlay-prebuilt.css';
 
-.container{
-  height: 400px;
-  width: 400px;
-  border: solid;
-}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

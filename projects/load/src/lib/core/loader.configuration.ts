@@ -1,5 +1,5 @@
 import { InjectionToken } from "@angular/core";
-import { DefaultLoadingComponent } from "./default-loading.component";
+import { DefaultLoadingComponent } from "projects/load/src/lib/core/default-loading.component";
 
 export interface LoaderConfiguration {
   loaderComponent: any

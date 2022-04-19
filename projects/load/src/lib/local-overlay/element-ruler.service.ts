@@ -16,7 +16,7 @@ export class ElementRuler {
   constructor(private zone: NgZone) {
   }
 
-  create(node: any, throttleTime = 100): ElementRulerRef {
+  create(node: any, throttleTime = 0): ElementRulerRef {
     let previousWidth = 0;
     let previousHeight = 0;
     let animationFrameId: number | undefined;
