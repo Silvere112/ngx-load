@@ -2,7 +2,6 @@ import { Directive, ElementRef, Inject, Input, OnDestroy, OnInit } from '@angula
 import { Overlay } from "@angular/cdk/overlay";
 import { ComponentPortal } from "@angular/cdk/portal";
 import { Observable, Subscription } from "rxjs";
-import { ElementRuler, Size } from "./element-ruler.service";
 import { CONFIGURATION_TOKEN, LoaderConfiguration } from "../core/loader.configuration";
 
 @Directive({
@@ -10,7 +9,6 @@ import { CONFIGURATION_TOKEN, LoaderConfiguration } from "../core/loader.configu
 })
 export class OverlayLoaderDirective implements OnInit, OnDestroy {
   overlayRef = this.createOverlay()
-  rulerRef = this.ruler.create(this.elementRef.nativeElement)
   currentSubscription: Subscription | undefined
 
   @Input()
@@ -22,13 +20,11 @@ export class OverlayLoaderDirective implements OnInit, OnDestroy {
   constructor(
     private elementRef: ElementRef,
     private overlay: Overlay,
-    private ruler: ElementRuler,
     @Inject(CONFIGURATION_TOKEN) private configuration: LoaderConfiguration
   ) {
   }
 
   ngOnInit(): void {
-    this.rulerRef.change.subscribe((size: Size) => this.handleChange(size));
   }
 
   ngOnDestroy(): void {
@@ -63,10 +59,10 @@ export class OverlayLoaderDirective implements OnInit, OnDestroy {
         .withPositions(
           [
             {
-              originX: "start",
-              originY: "bottom",
-              overlayX: "start",
-              overlayY: "bottom"
+              originX: "center",
+              originY: "center",
+              overlayX: "center",
+              overlayY: "center"
             }
           ]
         )
@@ -81,12 +77,5 @@ export class OverlayLoaderDirective implements OnInit, OnDestroy {
     this.overlayRef.detach()
   }
 
-  private handleChange(size: Size) {
-    this.update(size);
-  }
-
-  private update(size: Size) {
-    this.overlayRef.updateSize(size);
-  }
 }
 

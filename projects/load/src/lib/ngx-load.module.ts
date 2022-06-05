@@ -1,7 +1,6 @@
 import { ModuleWithProviders, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { OverlayModule } from "@angular/cdk/overlay";
-import { ElementRuler } from "./local-overlay/element-ruler.service";
 import { CONFIGURATION_TOKEN, DEFAULT_CONFIGURATION, LoaderConfiguration } from "./core/loader.configuration";
 import { DefaultLoadingComponent } from "./core/default-loading.component";
 import { OverlayLoaderDirective } from "./local-overlay/overlay-loader.directive";
@@ -19,7 +18,6 @@ import { LoaderService } from "./global-overlay/loader.service";
     OverlayModule
   ],
   providers: [
-    ElementRuler,
     LoaderService,
     {provide: CONFIGURATION_TOKEN, useValue: DEFAULT_CONFIGURATION}
   ],
