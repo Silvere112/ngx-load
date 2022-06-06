@@ -3,9 +3,9 @@ import { CommonModule } from '@angular/common';
 import { OverlayModule } from "@angular/cdk/overlay";
 import { CONFIGURATION_TOKEN, DEFAULT_CONFIGURATION, LoaderConfiguration } from "./core/loader.configuration";
 import { DefaultLoadingComponent } from "./core/default-loading.component";
-import { OverlayLoaderDirective } from "./local-overlay/overlay-loader.directive";
-import { ReplacementLoaderDirective } from "./local-replacement/replacement-loader.directive";
-import { LoaderService } from "./global-overlay/loader.service";
+import { OverlayLoaderDirective } from "./overlay/overlay-loader.directive";
+import { ReplacementLoaderDirective } from "./replacement/replacement-loader.directive";
+import { LoaderService } from "./overlay/loader.service";
 
 @NgModule({
   declarations: [
