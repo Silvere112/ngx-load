@@ -2,8 +2,8 @@
   "name": "ngx-load",
   "version": "0.0.x",
   "peerDependencies": {
-    "@angular/common": "^13.2.0",
-    "@angular/core": "^13.2.0"
+    "@angular/common": "^14.0.0",
+    "@angular/core": "^14.0.0"
   },
   "description": "A simple angular library for adding loaders.",
   "keywords": [
