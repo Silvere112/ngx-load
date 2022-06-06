@@ -7,8 +7,8 @@ import { LoaderService } from "projects/load/src/public-api";
   selector: 'app-root',
   template: `
     <section class="example-section">
-      <mat-checkbox class="example-margin" [(ngModel)]="globalLoaderActivated">Global loader</mat-checkbox>
-      <mat-checkbox class="example-margin" [(ngModel)]="overlayLoaderActivated">Overlay loader</mat-checkbox>
+      <mat-checkbox class="example-margin" [(ngModel)]="globalLoaderActivated">Component overlay loader</mat-checkbox>
+      <mat-checkbox class="example-margin" [(ngModel)]="overlayLoaderActivated">Page overlay loader</mat-checkbox>
       <mat-checkbox class="example-margin" [(ngModel)]="replacementLoaderActivated">Replacement loader</mat-checkbox>
     </section>
 
